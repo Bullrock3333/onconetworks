@@ -9,31 +9,31 @@ const pre_sale_data: DataType[] = [
    {
       id: 1, 
       title: "PRESALE - 1",
-      price: "Price $ 0.003",
+      price: "Price $ 0.03",
       desc: "35 Million $ONCO ",
    },
    {
       id: 2, 
       title: "PRESALE - 2",
-      price: "Price $ 0.005",
+      price: "Price $ 0.05",
       desc: "35 Million $ONCO",
    },
    {
       id: 3, 
       title: "PRESALE - 3",
-      price: "Price $ 0.007",
+      price: "Price $ 0.07",
       desc: "35 Million $ONCO",
    },
    // {
    //    id: 4, 
    //    title: "PRESALE - 4",
-   //    price: "Price $ 0.06",
+   //    price: "Price $ 0.09",
    //    desc: "45 Million $ONCO",
    // },
    // {
    //    id: 5, 
    //    title: "PRESALE - 5",
-   //    price: "Price $ 0.07",
+   //    price: "Price $ 0.1",
    //    desc: "45 Million $ONCO",
    // },
    // {
