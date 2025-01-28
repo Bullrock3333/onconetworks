@@ -40,7 +40,7 @@ const Hero = () => {
             <div className="iframe-container">
             <div className="btn-wrap">
                         <Link target="_blank" href="https://presale.onconetwork.xyz/" className="btn btn-two">
-                        OIN THE PRESALE
+                        JOIN THE PRESALE
                         </Link>
                      </div>
             </div>
