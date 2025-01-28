@@ -83,9 +83,9 @@ const FooterOne = () => {
                               </Link>
                            </li> 
                            <li key={1}>
-                              <Link href={'sitemap.xml'}>
+                              <a href="/sitemap.xml" download="sitemap.xml">
                               Sitemap
-                              </Link>
+                              </a>
                            </li> 
                      </ul>
                   </div>
