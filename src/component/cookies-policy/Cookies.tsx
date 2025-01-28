@@ -35,11 +35,18 @@ const Cookies = ({ single_blog }: any) => {
 
    <h4>4. Managing Cookies</h4>
    <p>You have the option to accept or decline cookies. Most web browsers automatically accept cookies, but you can modify your browser settings to refuse cookies if you prefer. However, doing so may affect your ability to use some features of our website.</p>
-   <p><strong>Google Chrome:</strong> Go to "Settings" > "Privacy and Security" > "Cookies and Other Site Data."</p>
-   <p><strong>Mozilla Firefox:</strong> Go to "Options" > "Privacy & Security" > "Cookies and Site Data."</p>
-   <p><strong>Safari:</strong> Go to "Preferences" > "Privacy" > "Cookies and Website Data."</p>
-   <p><strong>Microsoft Edge:</strong> Go to "Settings" > "Privacy, Search, and Services" > "Cookies and Site Permissions."</p>
-
+   <p>
+   <strong>Google Chrome:</strong> Go to "Settings" &gt; "Privacy and Security" &gt; "Cookies and Other Site Data."
+</p>
+<p>
+   <strong>Mozilla Firefox:</strong> Go to "Options" &gt; "Privacy & Security" &gt; "Cookies and Site Data."
+</p>
+<p>
+   <strong>Safari:</strong> Go to "Preferences" &gt; "Privacy" &gt; "Cookies and Website Data."
+</p>
+<p>
+   <strong>Microsoft Edge:</strong> Go to "Settings" &gt; "Privacy, Search, and Services" &gt; "Cookies and Site Permissions."
+</p>
    <p>You can also set your browser to notify you when you receive a cookie, giving you the chance to decide whether or not to accept it.</p>
 
    <h4>5. Consent to Cookies</h4>
