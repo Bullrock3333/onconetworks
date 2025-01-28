@@ -65,7 +65,7 @@ const Terms = ({ single_blog }: any) => {
    All content on the OncoNetwork website, including text, graphics, logos, and designs, is the property of OncoNetwork or its licensors. Unauthorized use of our intellectual property is prohibited.</p>
 
    <p><strong>6.2 License</strong><br/>
-   Users are granted a limited, non-exclusive license to access and use OncoNetwork’s services for personal and non-commercial purposes.</p>
+   Users are granted a limited, non-exclusive license to access and use OncoNetwork&rsquo;s services for personal and non-commercial purposes.</p>
 
    <h4>7. Privacy</h4>
    <p><strong>7.1 Data Collection</strong><br/>
@@ -96,7 +96,7 @@ const Terms = ({ single_blog }: any) => {
    OncoNetwork is not liable for any indirect, incidental, or consequential damages arising from the use of our platform.</p>
 
    <p><strong>10.2 No Warranty</strong><br/>
-   Our services are provided "as-is" without warranties of any kind.</p>
+   Our services are provided &quot;as-is&quot; without warranties of any kind.</p>
 
    <h4>11. Governing Law</h4>
    <p>These Terms of Use are governed by the laws of the country. Any disputes will be resolved in accordance with the laws of this jurisdiction.</p>

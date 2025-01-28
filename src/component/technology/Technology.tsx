@@ -10,7 +10,7 @@ const Technology = ({ single_blog }: any) => {
                   <div className="blog-details-wrap">
                      <div className="blog-details-content"> 
 
-                     <div class="col-lg-12 pb-30">
+                     <div className="col-lg-12 pb-30">
    <h2>ONCO Network: Revolutionizing Cancer Care Through Blockchain Technology</h2>
    <h3>Overview of ONCO Network</h3>
    <p>ONCO Network is an innovative blockchain-powered ecosystem designed to address the challenges in cancer care and treatment. By leveraging Ethereum blockchain technology, we aim to create a transparent, decentralized, and efficient platform that fosters global collaboration among healthcare providers, researchers, and patients. ONCO Network also integrates a financial incentive for its investors, making it a truly impactful and profitable initiative.</p>

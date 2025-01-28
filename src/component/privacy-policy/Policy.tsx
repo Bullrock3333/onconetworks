@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";   
+import Link from "next/link";
 
 const Policy = ({ single_blog }: any) => {
    return (
@@ -8,10 +8,16 @@ const Policy = ({ single_blog }: any) => {
             <div className="row">
                <div className="col-lg-12">
                   <div className="blog-details-wrap">
-                     <div className="blog-details-content"> 
+                     <div className="blog-details-content">
                         <div className="col-lg-12 pb-30">
                            <h2 className="title">Privacy Policy for OncoNetwork</h2>
-                           <p>At OncoNetwork, we value and prioritize the privacy and security of our users' data. This Privacy Policy outlines how we collect, store, use, and protect your information when you interact with our website (<a href="https://onconetwork.xyz">www.onconetwork.xyz</a>), our blockchain-based services, and related platforms. By using our services, you agree to the terms outlined in this policy.</p>
+                           <p>
+                              At OncoNetwork, we value and prioritize the privacy and security of our users&apos; data. 
+                              This Privacy Policy outlines how we collect, store, use, and protect your information when you 
+                              interact with our website (<a href="https://onconetwork.xyz">www.onconetwork.xyz</a>), 
+                              our blockchain-based services, and related platforms. By using our services, you agree to the terms 
+                              outlined in this policy.
+                           </p>
                         </div>
 
                         <div className="col-lg-12 pb-30">
@@ -129,11 +135,11 @@ const Policy = ({ single_blog }: any) => {
 
                      </div>
                   </div>
-               </div> 
+               </div>
             </div>
          </div>
       </section>
-   )
-}
+   );
+};
 
 export default Policy;
