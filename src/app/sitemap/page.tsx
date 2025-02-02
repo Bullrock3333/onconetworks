@@ -2,7 +2,7 @@ import Sitemap from "@/component/sitemap";
 import Wrapper from "@/layouts/Wrapper";
 
 export const metadata = {
-   title: "Medi Shark Finance is a decentralized finance (DeFi) platform",
+   title: "Onco Network DATA THAT FIGHTS CANCER",
 };
 
 const index = () => {
