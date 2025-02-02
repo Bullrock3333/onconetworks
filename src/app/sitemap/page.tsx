@@ -1,4 +1,4 @@
-import Sitemap from "@/component/sitemap";
+import Sitemap from "@/component/Sitemap";
 import Wrapper from "@/layouts/Wrapper";
 
 export const metadata = {
