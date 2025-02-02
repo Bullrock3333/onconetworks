@@ -1,5 +1,5 @@
 import Breadcrumb from "@/component/common/Breadcrumb"
-import Sitemap from "./sitemap"
+import Sitemap from "./Sitemap"
 //import DocumentArea from "@/component/common/DocumentArea"
 import FooterThree from "@/layouts/footers/FooterThree"
 import HeaderThree from "@/layouts/headers/HeaderThree"
