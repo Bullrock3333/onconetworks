@@ -108,10 +108,10 @@ const FooterThree = () => {
                            <li key={1}>
                               <Link href={'technology'}>
                               Technology
-                              </Link>
+                               </Link>
                            </li> 
                            <li key={1}>
-                              <Link href={'sitemap.xml'}>
+                              <Link href={'Sitemap'}>
                               Sitemap
                               </Link>
                            </li> 
