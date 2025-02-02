@@ -111,7 +111,7 @@ const FooterThree = () => {
                                </Link>
                            </li> 
                            <li key={1}>
-                              <Link href={'Sitemap'}>
+                              <Link href={'sitemap'}>
                               Sitemap
                               </Link>
                            </li> 
