@@ -80,12 +80,12 @@ const FooterOne = () => {
                            <li key={1}>
                               <Link href={'technology'}>
                               Technology
-                              </Link>
+                             </Link>
                            </li> 
                            <li key={1}>
-                              <a href="/sitemap.xml" download="sitemap.xml">
+                              <Link href={'Sitemap'}>
                               Sitemap
-                              </a>
+                              </Link>
                            </li> 
                      </ul>
                   </div>
