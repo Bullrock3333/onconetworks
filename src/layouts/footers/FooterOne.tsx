@@ -83,7 +83,7 @@ const FooterOne = () => {
                              </Link>
                            </li> 
                            <li key={1}>
-                              <Link href={'sitemap'}>
+                              <Link href={'https://www.onconetwork.xyz/sitemap'}>
                               Sitemap
                               </Link>
                            </li> 
