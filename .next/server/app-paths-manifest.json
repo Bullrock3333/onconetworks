@@ -1,7 +1,6 @@
 {
+  "/not-found": "app/not-found.js",
   "/oncoexchangepro/page": "app/oncoexchangepro/page.js",
-  "/blockchain/page": "app/blockchain/page.js",
   "/page": "app/page.js",
-  "/nfc-marketplace/page": "app/nfc-marketplace/page.js",
   "/[...not-found]/page": "app/[...not-found]/page.js"
 }
