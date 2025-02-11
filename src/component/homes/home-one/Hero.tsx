@@ -19,19 +19,19 @@ const Hero = () => {
       title: "OncoBlockchain", 
       description: "Our own blockchain network for secure transactions.", 
       icon: <FaNetworkWired />, 
-      link: "#"
+      link: "/blockchain"
     },
     { 
       title: "OncoExchange", 
       description: "A centralized exchange for seamless crypto trading.", 
       icon: <FaExchangeAlt />, 
-      link: "#"
+      link: "/oncoexchangepro"
     },
     { 
       title: "NFT Collection", 
       description: "Exclusive NFT collection for our community.", 
       icon: <FaCube />, 
-      link: "#"
+      link: "/nfc-marketplace"
     }
   ];
 
@@ -53,7 +53,7 @@ const Hero = () => {
     },
     { 
       title: "Tap Tap Game", 
-      description: "Exciting game on Shark Arena platform.", 
+      description: "Exciting game on Telegram.", 
       icon: <FaGamepad />,
       link: "https://t.me/OncoNetworkBot/SharkArenabyOncoNetwork"
     }
