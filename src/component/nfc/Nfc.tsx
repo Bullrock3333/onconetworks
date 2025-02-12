@@ -16,6 +16,7 @@ import {
   Users,
   Beaker
 } from "lucide-react";
+import { CSSProperties } from 'react';
 
 interface ContentData {
    title_1: string;
@@ -23,7 +24,7 @@ interface ContentData {
    social_icon: string[];
 } 
 
-const styles = {
+const styles: Record<string, CSSProperties> = {
   section: {
     padding: '60px 0 250px',
     background: 'linear-gradient(to bottom, #0f172a, #1e293b)'
@@ -48,11 +49,11 @@ const styles = {
     fontWeight: 'bold',
     marginBottom: '1.5rem',
     color: '#e2e8f0',
-    textAlign: 'center'
+    textAlign: 'center' as const
   },
   description: {
     color: '#94a3b8',
-    textAlign: 'center',
+    textAlign: 'center' as const,
     fontSize: '1.1rem',
     maxWidth: '800px',
     margin: '0 auto 2rem'
@@ -121,16 +122,17 @@ const styles = {
     color: '#e2e8f0',
     fontSize: '1.25rem',
     fontWeight: 'bold',
-    marginTop: '1rem'
+    marginTop: '1rem',
+    textAlign: 'center' as const
   },
   categoryText: {
     color: '#94a3b8',
     marginTop: '0.5rem',
-    textAlign: 'center'
+    textAlign: 'center' as const
   }
 };
 
-const NfcMarketplace = ({ single_blog }: any) => {
+const NfcMarketplace = ({ single_blog }: { single_blog?: any }) => {
    return (
       <section style={styles.section}>
          <div className="container">
