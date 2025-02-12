@@ -7,7 +7,7 @@ const Nfc = () => {
   return (
     <main>
       <HeaderThree />
-      <Breadcrumb title="NFC Marketplace" />
+      <Breadcrumb title="NFT Collection" />
       <NfcMarketplace />
       {/*<DocumentArea />*/}
       <FooterThree />
