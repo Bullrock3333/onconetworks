@@ -31,7 +31,7 @@ const Hero = () => {
       title: "NFT Collection", 
       description: "Exclusive NFT collection for our community.", 
       icon: <FaCube />, 
-      link: "/nfc-marketplace"
+      link: "/nft-collection"
     }
   ];
 
