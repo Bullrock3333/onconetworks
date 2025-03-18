@@ -371,6 +371,7 @@ const Hero = () => {
         }
         
         .hero-thumb-container {
+          margin-left: 130px;
           position: relative;
           margin: 0 auto 20px;
           text-align: center;
