@@ -32,14 +32,10 @@ const Hero = () => {
     );
     
     const sections = document.querySelectorAll('.animate-on-scroll');
-    sections.forEach(section => {
-      observer.observe(section);
-    });
+    sections.forEach(section => observer.observe(section));
     
     return () => {
-      sections.forEach(section => {
-        observer.unobserve(section);
-      });
+      sections.forEach(section => observer.unobserve(section));
     };
   }, []);
 
@@ -74,7 +70,7 @@ const Hero = () => {
 
   const exchanges = [
     { url: "https://dexscreener.com", logo: "https://mediaresource.sfo2.digitaloceanspaces.com/wp-content/uploads/2024/04/20232343/dex-screener-logo-png_seeklogo-527276.png", alt: "DEX Scanner" },
-    { url: "https://bitmart.com", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeWCKDbc4qvrftdgzYp4-FC-8nXgGGzozSbA&s", alt: "BitMart" },
+    { url: "https://bitmart.com", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn9GcSeWCKDbc4qvrftdgzYp4-FC-8nXgGGzozSbA&s", alt: "BitMart" },
     { url: "https://okx.com", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/OKX_Logo.svg/2048px-OKX_Logo.svg.png", alt: "OKEx" },
     { url: "https://coinbase.com", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbngGQF6hcTTU1A8Ymi2VldXqCsPkBu_ltAhIKiRg&s", alt: "Coinbase" },
     { url: "https://crypto.com", logo: "https://play-lh.googleusercontent.com/OhMXdCWVlKDPK-sMeMyd2PjwvFQ8d1gt5xLYtPVSyvLWxalI6bJpQz2sqGIZDIDXM4Y", alt: "Crypto.com" },
@@ -101,7 +97,6 @@ const Hero = () => {
   return (
     <div className="hero-wrapper hero-1">
       <div className="container">
-        {/* Enhanced Hero Background Effects */}
         <div className="hero-bg-gradient"></div>
         <div className="animated-bg">
           <div className="cube"></div>
@@ -119,7 +114,6 @@ const Hero = () => {
           <span className="ripple-5"></span>
         </div>
 
-        {/* Hero Main Section - Enhanced with animations */}
         <motion.div 
           className="hero-style1"
           ref={heroRef}
@@ -127,9 +121,9 @@ const Hero = () => {
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="row flex-row-reverse align-items-center">
+          <div className="row flex-column-reverse flex-lg-row-reverse align-items-center">
             <motion.div 
-              className="col-lg-5"
+              className="col-lg-5 col-12"
               initial={{ x: 100, opacity: 0 }}
               animate={isVisible ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -142,8 +136,8 @@ const Hero = () => {
                     alt="Onco Network" 
                     priority 
                     className="animated-image"
-                    width={300}  // Reduced dimensions
-                    height={300} // Reduced dimensions
+                    width={250}
+                    height={250}
                   />
                 </div>
                 <div className="floating-icons">
@@ -155,7 +149,7 @@ const Hero = () => {
             </motion.div>
             
             <motion.div 
-              className="col-lg-7 hero-content"
+              className="col-lg-7 col-12 hero-content"
               initial={{ x: -100, opacity: 0 }}
               animate={isVisible ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -208,7 +202,6 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Exchanges Section */}
         <div id="products-section" className="section-padding animate-on-scroll exchanges-section">
           <h2 className="section-title">
             <span className="title-accent"></span>
@@ -237,7 +230,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Live Products Section */}
         <div className="section-padding animate-on-scroll">
           <h2 className="section-title">
             <span className="title-accent"></span>
@@ -267,7 +259,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Our Products Section */}
         <div className="section-padding animate-on-scroll">
           <h2 className="section-title">
             <span className="title-accent"></span>
@@ -309,6 +300,7 @@ const Hero = () => {
         .container {
           position: relative;
           z-index: 2;
+          padding: 0 15px;
         }
         
         .hero-bg-gradient {
@@ -335,8 +327,8 @@ const Hero = () => {
           position: absolute;
           top: 80vh;
           left: 45vw;
-          width: 10px;
-          height: 10px;
+          width: 8px;
+          height: 8px;
           border: 1px solid rgba(127, 255, 255, 0.25);
           transform-origin: top left;
           transform: scale(0) rotate(0deg) translate(-50%, -50%);
@@ -344,39 +336,14 @@ const Hero = () => {
           border-radius: 2px;
         }
         
-        .cube:nth-child(2) {
-          animation-delay: 2s;
-          left: 25vw;
-          border-color: rgba(127, 150, 255, 0.25);
-        }
-        
-        .cube:nth-child(3) {
-          animation-delay: 4s;
-          left: 75vw;
-          border-color: rgba(255, 127, 255, 0.25);
-        }
-        
-        .cube:nth-child(4) {
-          animation-delay: 6s;
-          left: 90vw;
-          border-color: rgba(255, 255, 127, 0.25);
-        }
-        
-        .cube:nth-child(5) {
-          animation-delay: 8s;
-          left: 10vw;
-          border-color: rgba(127, 255, 127, 0.25);
-        }
+        .cube:nth-child(2) { animation-delay: 2s; left: 25vw; border-color: rgba(127, 150, 255, 0.25); }
+        .cube:nth-child(3) { animation-delay: 4s; left: 75vw; border-color: rgba(255, 127, 255, 0.25); }
+        .cube:nth-child(4) { animation-delay: 6s; left: 90vw; border-color: rgba(255, 255, 127, 0.25); }
+        .cube:nth-child(5) { animation-delay: 8s; left: 10vw; border-color: rgba(127, 255, 127, 0.25); }
         
         @keyframes cube {
-          from {
-            transform: scale(0) rotate(0deg) translate(-50%, -50%);
-            opacity: 1;
-          }
-          to {
-            transform: scale(20) rotate(960deg) translate(-50%, -50%);
-            opacity: 0;
-          }
+          from { transform: scale(0) rotate(0deg) translate(-50%, -50%); opacity: 1; }
+          to { transform: scale(15) rotate(960deg) translate(-50%, -50%); opacity: 0; }
         }
         
         .ripple-shape span {
@@ -386,70 +353,29 @@ const Hero = () => {
           pointer-events: none;
         }
         
-        .ripple-1 {
-          width: 600px;
-          height: 600px;
-          top: -50%;
-          right: -10%;
-          animation: ripple 12s linear infinite;
-        }
-        
-        .ripple-2 {
-          width: 500px;
-          height: 500px;
-          bottom: -10%;
-          left: -10%;
-          animation: ripple 12s linear 3s infinite;
-        }
-        
-        .ripple-3 {
-          width: 300px;
-          height: 300px;
-          top: 30%;
-          right: 20%;
-          animation: ripple 12s linear 6s infinite;
-        }
-        
-        .ripple-4 {
-          width: 200px;
-          height: 200px;
-          bottom: 30%;
-          left: 30%;
-          animation: ripple 12s linear 9s infinite;
-        }
-        
-        .ripple-5 {
-          width: 100px;
-          height: 100px;
-          top: 10%;
-          left: 10%;
-          animation: ripple 12s linear 1.5s infinite;
-        }
+        .ripple-1 { width: 400px; height: 400px; top: -20%; right: -10%; animation: ripple 12s linear infinite; }
+        .ripple-2 { width: 300px; height: 300px; bottom: -10%; left: -10%; animation: ripple 12s linear 3s infinite; }
+        .ripple-3 { width: 200px; height: 200px; top: 30%; right: 20%; animation: ripple 12s linear 6s infinite; }
+        .ripple-4 { width: 150px; height: 150px; bottom: 30%; left: 30%; animation: ripple 12s linear 9s infinite; }
+        .ripple-5 { width: 80px; height: 80px; top: 10%; left: 10%; animation: ripple 12s linear 1.5s infinite; }
         
         @keyframes ripple {
-          0% {
-            transform: scale(0.8);
-            opacity: 0.3;
-          }
-          50% {
-            transform: scale(1.2);
-            opacity: 0.5;
-          }
-          100% {
-            transform: scale(0.8);
-            opacity: 0.3;
-          }
+          0% { transform: scale(0.8); opacity: 0.3; }
+          50% { transform: scale(1.2); opacity: 0.5; }
+          100% { transform: scale(0.8); opacity: 0.3; }
         }
         
         .hero-style1 {
-          padding: 120px 0 60px;
+          padding: 80px 0 40px;
           position: relative;
         }
         
         .hero-thumb-container {
-        margin-left: 130px;
           position: relative;
-          margin-bottom: 30px;
+          margin: 0 auto 20px;
+          text-align: center;
+          width: 100%;
+          max-width: 300px;
         }
         
         .hero-glow {
@@ -463,24 +389,17 @@ const Hero = () => {
         }
         
         .animated-image {
-          border-radius: 20px;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+          border-radius: 15px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
           animation: pulse 3s ease-in-out infinite;
+          max-width: 100%;
+          height: auto;
         }
         
         @keyframes pulse {
-          0% {
-            transform: scale(1);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-          }
-          50% {
-            transform: scale(1.03);
-            box-shadow: 0 15px 40px rgba(66, 138, 255, 0.4);
-          }
-          100% {
-            transform: scale(1);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-          }
+          0% { transform: scale(1); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); }
+          50% { transform: scale(1.03); box-shadow: 0 12px 30px rgba(66, 138, 255, 0.4); }
+          100% { transform: scale(1); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); }
         }
         
         .floating-icons {
@@ -497,48 +416,28 @@ const Hero = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 40px;
-          height: 40px;
+          width: 35px;
+          height: 35px;
           background: rgba(255, 255, 255, 0.1);
           backdrop-filter: blur(5px);
           border-radius: 50%;
           color: #fff;
-          font-size: 20px;
+          font-size: 18px;
         }
         
-        .icon-1 {
-          top: 20%;
-          right: -20px;
-          animation: float 6s ease-in-out infinite;
-        }
-        
-        .icon-2 {
-          bottom: 30%;
-          left: -20px;
-          animation: float 7s ease-in-out 1s infinite;
-        }
-        
-        .icon-3 {
-          top: 60%;
-          right: 10%;
-          animation: float 5s ease-in-out 0.5s infinite;
-        }
+        .icon-1 { top: 15%; right: 5%; animation: float 6s ease-in-out infinite; }
+        .icon-2 { bottom: 25%; left: 5%; animation: float 7s ease-in-out 1s infinite; }
+        .icon-3 { top: 60%; right: 10%; animation: float 5s ease-in-out 0.5s infinite; }
         
         @keyframes float {
-          0% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-15px);
-          }
-          100% {
-            transform: translateY(0px);
-          }
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-12px); }
+          100% { transform: translateY(0px); }
         }
         
         .hero-content {
-          padding-top: 20px;
-          padding-bottom: 20px;
+          padding: 20px 0;
+          text-align: center;
         }
         
         .hero-subtitle {
@@ -547,13 +446,13 @@ const Hero = () => {
           -webkit-background-clip: text;
           background-clip: text;
           color: transparent;
-          font-size: 1.2rem;
+          font-size: 1rem;
           font-weight: 600;
           text-transform: uppercase;
           letter-spacing: 2px;
-          margin-bottom: 20px;
+          margin-bottom: 15px;
           position: relative;
-          padding-left: 40px;
+          padding-left: 30px;
         }
         
         .hero-subtitle:before {
@@ -561,18 +460,18 @@ const Hero = () => {
           position: absolute;
           left: 0;
           top: 50%;
-          width: 30px;
+          width: 20px;
           height: 2px;
           background: linear-gradient(90deg, #4cc9f0, #4361ee);
           transform: translateY(-50%);
         }
         
         .hero-title {
-          font-size: 3.5rem;
+          font-size: 2.5rem;
           font-weight: 800;
           line-height: 1.2;
-          margin-bottom: 20px;
-          text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          margin-bottom: 15px;
+          text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
         
         .highlight {
@@ -585,10 +484,10 @@ const Hero = () => {
         .highlight:after {
           content: '';
           position: absolute;
-          bottom: 5px;
+          bottom: 3px;
           left: 0;
           width: 100%;
-          height: 10px;
+          height: 8px;
           background: linear-gradient(90deg, #f72585, #7209b7);
           z-index: -1;
           opacity: 0.6;
@@ -604,23 +503,17 @@ const Hero = () => {
         }
         
         @keyframes gradientAnimation {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
         }
         
         .hero-description {
-          font-size: 1.2rem;
-          line-height: 1.6;
-          margin-bottom: 30px;
+          font-size: 1rem;
+          line-height: 1.5;
+          margin-bottom: 20px;
           color: rgba(255, 255, 255, 0.8);
-          max-width: 90%;
+          max-width: 100%;
         }
         
         .text-highlight {
@@ -630,17 +523,21 @@ const Hero = () => {
         
         .hero-stats {
           display: flex;
-          gap: 30px;
-          margin-bottom: 30px;
+          justify-content: center;
+          gap: 20px;
+          margin-bottom: 20px;
+          flex-wrap: wrap;
         }
         
         .stat-item {
           display: flex;
           flex-direction: column;
+          align-items: center;
+          min-width: 80px;
         }
         
         .stat-number {
-          font-size: 2.2rem;
+          font-size: 1.8rem;
           font-weight: 700;
           color: #fff;
           line-height: 1;
@@ -648,16 +545,19 @@ const Hero = () => {
         }
         
         .stat-label {
-          font-size: 0.9rem;
+          font-size: 0.8rem;
           color: rgba(255, 255, 255, 0.7);
           text-transform: uppercase;
           letter-spacing: 1px;
+          text-align: center;
         }
         
         .btn-wrap {
+        margin-left: -80px;
           display: flex;
-          gap: 20px;
-          margin-top: 30px;
+          gap: 15px;
+          justify-content: center;
+          margin-top: 20px;
           flex-wrap: wrap;
         }
         
@@ -666,10 +566,10 @@ const Hero = () => {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          padding: 15px 30px;
+          padding: 12px 25px;
           border-radius: 8px;
           font-weight: 600;
-          font-size: 1rem;
+          font-size: 0.9rem;
           text-transform: uppercase;
           letter-spacing: 1px;
           overflow: hidden;
@@ -677,6 +577,8 @@ const Hero = () => {
           border: none;
           cursor: pointer;
           text-decoration: none;
+          width: 100%;
+          max-width: 200px;
         }
         
         .btn:before {
@@ -697,15 +599,16 @@ const Hero = () => {
         
         .btn-text {
           z-index: 1;
-          margin-right: 10px;
+          margin-right: 8px;
         }
         
         .btn-icon {
           z-index: 1;
-          font-size: 0.9rem;
+          font-size: 0.8rem;
         }
         
         .btn-paper {
+          margin-left: -80px;
           background: rgba(255, 255, 255, 0.1);
           color: #fff;
           backdrop-filter: blur(5px);
@@ -715,23 +618,23 @@ const Hero = () => {
         .btn-paper:hover {
           background: rgba(255, 255, 255, 0.2);
           transform: translateY(-3px);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
         
         .btn-presale {
           background: linear-gradient(45deg, #f72585, #7209b7);
           color: #fff;
-          box-shadow: 0 5px 15px rgba(247, 37, 133, 0.4);
+          box-shadow: 0 4px 12px rgba(247, 37, 133, 0.4);
         }
         
         .btn-presale:hover {
           transform: translateY(-3px);
-          box-shadow: 0 10px 25px rgba(247, 37, 133, 0.6);
+          box-shadow: 0 8px 20px rgba(247, 37, 133, 0.6);
         }
         
         .scroll-indicator {
           position: absolute;
-          bottom: 30px;
+          bottom: 20px;
           left: 50%;
           transform: translateX(-50%);
           display: flex;
@@ -742,32 +645,26 @@ const Hero = () => {
         }
         
         .scroll-text {
-          font-size: 0.8rem;
+          font-size: 0.7rem;
           text-transform: uppercase;
-          letter-spacing: 2px;
-          margin-bottom: 10px;
+          letter-spacing: 1.5px;
+          margin-bottom: 8px;
           color: rgba(255, 255, 255, 0.7);
         }
         
         .scroll-icon {
-          font-size: 1.2rem;
+          font-size: 1rem;
           color: #fff;
         }
         
         @keyframes bounce {
-          0%, 20%, 50%, 80%, 100% {
-            transform: translateY(0);
-          }
-          40% {
-            transform: translateY(-10px);
-          }
-          60% {
-            transform: translateY(-5px);
-          }
+          0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+          40% { transform: translateY(-8px); }
+          60% { transform: translateY(-4px); }
         }
         
         .section-padding {
-          padding: 80px 0;
+          padding: 60px 0;
           position: relative;
           opacity: 0;
           transform: translateY(30px);
@@ -780,42 +677,44 @@ const Hero = () => {
         }
         
         .section-title {
-          font-size: 2.2rem;
+          font-size: 1.8rem;
           font-weight: 700;
           color: #fff;
-          margin-bottom: 60px;
+          margin-bottom: 40px;
           text-align: center;
           position: relative;
           display: flex;
           align-items: center;
           justify-content: center;
           text-transform: uppercase;
-          letter-spacing: 2px;
+          letter-spacing: 1.5px;
+          flex-wrap: wrap;
+          gap: 10px;
         }
         
         .title-accent {
           display: block;
-          width: 50px;
-          height: 5px;
-          margin-right: 15px;
+          width: 40px;
+          height: 4px;
+          margin-right: 10px;
           background: linear-gradient(90deg, #f72585, #7209b7);
-          border-radius: 5px;
+          border-radius: 4px;
         }
         
         .title-line {
           display: block;
-          width: 50px;
-          height: 5px;
-          margin-left: 15px;
+          width: 40px;
+          height: 4px;
+          margin-left: 10px;
           background: linear-gradient(90deg, #7209b7, #3a86ff);
-          border-radius: 5px;
+          border-radius: 4px;
         }
         
         .exchanges-slider {
           position: relative;
           width: 100%;
           overflow: hidden;
-          padding: 20px 0;
+          padding: 15px 0;
         }
         
         .slider-content {
@@ -831,8 +730,8 @@ const Hero = () => {
         
         .exchange-item {
           flex-shrink: 0;
-          width: 200px;
-          padding: 20px;
+          width: 150px;
+          padding: 15px;
           text-align: center;
         }
         
@@ -850,37 +749,35 @@ const Hero = () => {
         }
         
         .exchange-logo {
-          width: 120px;
-          height: 60px;
+          width: 100px;
+          height: 50px;
           object-fit: contain;
-          border-radius: 10px;
+          border-radius: 8px;
           margin: 0 auto;
         }
         
         .products-row {
           display: flex;
-          flex-direction: row;
-          justify-content: center;
-          gap: 30px;
-          flex-wrap: nowrap;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
         }
         
         .product-card-link {
           text-decoration: none;
           color: inherit;
-          width: 350px;
+          width: 100%;
+          max-width: 350px;
           perspective: 1000px;
-          flex-shrink: 0;
         }
         
         .product-card {
           background: rgba(20, 20, 30, 0.6);
           backdrop-filter: blur(10px);
-          border-radius: 15px;
-          padding: 30px;
+          border-radius: 12px;
+          padding: 25px;
           color: #fff;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-          transform: translateY(0) rotateY(0);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
           transition: all 0.5s ease;
           display: flex;
           flex-direction: column;
@@ -892,8 +789,8 @@ const Hero = () => {
         }
         
         .product-card:hover {
-          transform: translateY(-10px) rotateY(5deg);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+          transform: translateY(-8px);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
           border-color: var(--product-color, #4a90e2);
         }
         
@@ -914,17 +811,17 @@ const Hero = () => {
         }
         
         .product-icon {
-          font-size: 2rem;
-          margin-bottom: 20px;
+          font-size: 1.8rem;
+          margin-bottom: 15px;
           color: #fff;
           background-color: var(--product-color, #4a90e2);
-          width: 80px;
-          height: 80px;
+          width: 60px;
+          height: 60px;
           display: flex;
           align-items: center;
           justify-content: center;
-          border-radius: 20px;
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+          border-radius: 15px;
+          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
           transition: all 0.3s ease;
           position: relative;
           z-index: 1;
@@ -932,12 +829,12 @@ const Hero = () => {
         
         .product-card:hover .product-icon {
           transform: scale(1.1);
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
         }
         
         .product-title {
-          font-size: 1.5rem;
-          margin-bottom: 15px;
+          font-size: 1.3rem;
+          margin-bottom: 12px;
           font-weight: bold;
           text-align: center;
           position: relative;
@@ -946,10 +843,10 @@ const Hero = () => {
         
         .product-description {
           text-align: center;
-          margin-bottom: 20px;
+          margin-bottom: 15px;
           color: rgba(255, 255, 255, 0.7);
-          font-size: 1rem;
-          line-height: 1.6;
+          font-size: 0.9rem;
+          line-height: 1.5;
           position: relative;
           z-index: 1;
         }
@@ -960,14 +857,14 @@ const Hero = () => {
           color: var(--product-color, #4a90e2);
           font-weight: 600;
           margin-top: auto;
-          padding-top: 20px;
+          padding-top: 15px;
           transition: all 0.3s ease;
           position: relative;
           z-index: 1;
         }
         
         .explore-icon {
-          margin-left: 10px;
+          margin-left: 8px;
           transition: transform 0.3s ease;
         }
         
@@ -978,54 +875,134 @@ const Hero = () => {
         .product-card:hover .explore-icon {
           transform: translateX(5px);
         }
-        
-        @media (max-width: 992px) {
-          .hero-title {
-            font-size: 2.5rem;
-          }
-          
+
+        /* Responsive Design */
+        @media (min-width: 992px) {
           .hero-style1 {
-            padding: 80px 0 40px;
+            padding: 120px 0 60px;
           }
           
-          .products-row {
-            flex-wrap: wrap;
+          .hero-thumb-container {
+            margin: 0;
+            max-width: 350px;
           }
           
-          .product-card-link {
-            width: 300px;
+          .hero-content {
+            text-align: left;
+            padding-right: 30px;
           }
-        }
-        
-        @media (max-width: 768px) {
+          
           .hero-title {
-            font-size: 2rem;
+            font-size: 3.5rem;
           }
           
           .hero-stats {
-            flex-direction: column;
-            gap: 15px;
-          }
-          
-          .btn-wrap {
-            flex-direction: column;
-            gap: 15px;
+            justify-content: flex-start;
           }
           
           .btn {
-            width: 100%;
-          }
-          
-          .section-padding {
-            padding: 60px 0;
+            width: auto;
           }
           
           .products-row {
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
           }
           
-          .product-card-link {
-            width: 100%;
+          .animated-image {
+            width: 300px;
+            height: 300px;
+          }
+        }
+        
+        @media (max-width: 991px) {
+          .hero-title {
+            font-size: 2.2rem;
+          }
+          
+          .hero-description {
+            font-size: 0.95rem;
+          }
+          
+          .stat-number {
+            font-size: 1.6rem;
+          }
+        }
+        
+        @media (max-width: 767px) {
+          .hero-style1 {
+            padding: 60px 0 30px;
+          }
+          
+          .hero-title {
+            font-size: 1.8rem;
+          }
+          
+          .hero-description {
+            font-size: 0.9rem;
+          }
+          
+          .hero-subtitle {
+            font-size: 0.9rem;
+          }
+          
+          .stat-number {
+            font-size: 1.4rem;
+          }
+          
+          .section-padding {
+            padding: 40px 0;
+          }
+          
+          .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+          }
+          
+          .exchange-item {
+            width: 120px;
+            padding: 10px;
+          }
+          
+          .exchange-logo {
+            width: 80px;
+            height: 40px;
+          }
+        }
+        
+        @media (max-width: 576px) {
+          .hero-title {
+            font-size: 1.6rem;
+          }
+          
+          .hero-thumb-container {
+            max-width: 200px;
+          }
+          
+          .floating-icon {
+            width: 30px;
+            height: 30px;
+            font-size: 16px;
+          }
+          
+          .btn {
+            padding: 10px 20px;
+            font-size: 0.8rem;
+          }
+          
+          .product-icon {
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+          }
+          
+          .product-title {
+            font-size: 1.2rem;
+          }
+          
+          .product-description {
+            font-size: 0.85rem;
           }
         }
       `}</style>
