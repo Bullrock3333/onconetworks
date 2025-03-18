@@ -244,7 +244,7 @@ const Hero = () => {
                 className="product-card-link"
                 target="_blank"
               >
-                <div className="product-card" style={{"--product-color": product.color}}>
+                <div className="product-card" style={{ product.color}}>
                   <div className="product-card-glow"></div>
                   <div className="product-icon" style={{backgroundColor: product.color}}>{product.icon}</div>
                   <h3 className="product-title">{product.title}</h3>
