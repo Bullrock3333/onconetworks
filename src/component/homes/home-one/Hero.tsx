@@ -41,7 +41,7 @@ const Hero = () => {
 
   const scrollToContent = () => {
     const contentSection = document.getElementById('products-section');
-    contentSection.scrollIntoView({ behavior: 'smooth' });
+    contentSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const ourProducts = [
@@ -244,9 +244,9 @@ const Hero = () => {
                 className="product-card-link"
                 target="_blank"
               >
-                <div className="product-card" style={{ product.color}}>
+                <div className="product-card" style={{ "--product-color": product.color }}>
                   <div className="product-card-glow"></div>
-                  <div className="product-icon" style={{backgroundColor: product.color}}>{product.icon}</div>
+                  <div className="product-icon" style={{ backgroundColor: product.color }}>{product.icon}</div>
                   <h3 className="product-title">{product.title}</h3>
                   <p className="product-description">{product.description}</p>
                   <div className="product-explore">
@@ -272,9 +272,9 @@ const Hero = () => {
                 href={product.link}
                 className="product-card-link"
               >
-                <div className="product-card" style={{"--product-color": product.color}}>
+                <div className="product-card" style={{ "--product-color": product.color }}>
                   <div className="product-card-glow"></div>
-                  <div className="product-icon" style={{backgroundColor: product.color}}>{product.icon}</div>
+                  <div className="product-icon" style={{ backgroundColor: product.color }}>{product.icon}</div>
                   <h3 className="product-title">{product.title}</h3>
                   <p className="product-description">{product.description}</p>
                   <div className="product-explore">
@@ -553,7 +553,6 @@ const Hero = () => {
         }
         
         .btn-wrap {
-        margin-left: -80px;
           display: flex;
           gap: 15px;
           justify-content: center;
@@ -608,7 +607,6 @@ const Hero = () => {
         }
         
         .btn-paper {
-          margin-left: -80px;
           background: rgba(255, 255, 255, 0.1);
           color: #fff;
           backdrop-filter: blur(5px);
