@@ -371,9 +371,7 @@ const Hero = () => {
         }
         
         .hero-thumb-container {
-          margin-left: 130px;
           position: relative;
-          margin: 0 auto 20px;
           text-align: center;
           width: 100%;
           max-width: 300px;
@@ -554,6 +552,7 @@ const Hero = () => {
         }
         
         .btn-wrap {
+          margin-left: -250px;  
           display: flex;
           gap: 15px;
           justify-content: center;
@@ -561,7 +560,7 @@ const Hero = () => {
           flex-wrap: wrap;
         }
         
-        .btn {
+        .btn {  
           position: relative;
           display: inline-flex;
           align-items: center;
@@ -882,6 +881,7 @@ const Hero = () => {
           }
           
           .hero-thumb-container {
+           
             margin: 0;
             max-width: 350px;
           }
